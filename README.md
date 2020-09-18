@@ -1,5 +1,5 @@
 # stats-ai.github.io
-Reference guide from statistics to artificial intelligence. Let's change the world. https://stats-ai.github.io/
+Reference guide from statistics to artificial intelligence. Let's change the world. https://statistics-reference.github.io/
 
 **Goals of this github:**
 * Reference guide for practitioners, learners, and educators
