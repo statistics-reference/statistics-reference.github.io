@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Computational Techniques | Statistics: A Reference</title>
+  <title>1 Mean Inference (n.u.f) | Statistics: A Reference</title>
   <meta name="description" content="This is a quick reference for statistics and data science." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Computational Techniques | Statistics: A Reference" />
+  <meta property="og:title" content="1 Mean Inference (n.u.f) | Statistics: A Reference" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="stats-ai" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Computational Techniques | Statistics: A Reference" />
+  <meta name="twitter:title" content="1 Mean Inference (n.u.f) | Statistics: A Reference" />
   
   <meta name="twitter:description" content="This is a quick reference for statistics and data science." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="inferential-computation.html"/>
-
+<link rel="prev" href="inferential-models.html"/>
+<link rel="next" href="point-inference-mean-nufu.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -133,18 +133,90 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="computational" class="section level1 unnumbered">
-<h1>Computational Techniques</h1>
-<p>Under construction</p>
+<div id="point-inference-mean-nuf" class="section level1">
+<h1><span class="header-section-number">1</span> Mean Inference (n.u.f)</h1>
+<p>This section covers population mean inference under the following assumptions and conditions:</p>
+<p><strong>Assumptions:</strong></p>
+<ul>
+<li>Population follows a normal distribution</li>
+<li>Observations are iid</li>
+<li>Known population variance ex ante</li>
+</ul>
+<p><strong>Other Conditions, Criteria, or Attributes:</strong></p>
+<ul>
+<li>Univariate mean inference</li>
+<li>Frequentist perspective</li>
+</ul>
+<hr />
+<p><strong>For mean inference under other assumptions and conditions, please visit:</strong></p>
+<ul>
+<li>Mean Inference (n.u.f): normal, iid, univariate, frequentist, known variance</li>
+<li>Mean Inference (n.u.f.u): normal, iid, univariate, frequentist, unknown variance</li>
+</ul>
+<div id="overview-and-summary" class="section level2">
+<h2><span class="header-section-number">1.1</span> Overview and Summary</h2>
+<p><strong>Key Takeaways:</strong></p>
+<ul>
+<li>We calculate the Z-statistic and use the Z-distribution (standard normal distribution) to create the confidence interval since the population variance is known. If the population variance is unknown, we would use the T-statistic and T-distribution.</li>
+</ul>
+<hr />
+<p><strong>Overview and Summary:</strong></p>
+<p>Here we discuss how to perform univariate mean inference when the population is assumed to be normal, our observations are iid, and population variance is known ex ante. Inference is done from a frequentist’s perspective. As it is not very often that we know the population variance, this technique is not very useful.</p>
+</div>
+<div id="point-estimation" class="section level2">
+<h2><span class="header-section-number">1.2</span> Point Estimation</h2>
+<p><strong>Key Takeaways:</strong></p>
+<ul>
+<li>Under normal assumption, both maximum likelihood estimation and method of moments will result in the same estimate of the mean as the formula below.</li>
+<li>The below formula will produce an unbiased estimate no matter what the population distribution is. Proof.</li>
+</ul>
+<hr />
+<p><strong>Point Estimation:</strong></p>
+<p>The following formula can be used to calculate an unbiased estimate of the population mean using sample data:</p>
+<p><span class="math inline">\(\bar{x} = \frac{\sum^n_{i=1}{x_{i}}}{n}\)</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\bar{x}\)</span> = unbiased estimate of population mean</li>
+<li><span class="math inline">\(n\)</span> = sample size</li>
+<li><span class="math inline">\(x_{i}\)</span> = your sample observations</li>
+</ul>
+<p>The formula above not only produces an unbiased estimate under the assumptions on this page, but always produces an unbiased estimate of the population mean no matter the distribution (as long as the population mean exists).</p>
+</div>
+<div id="confidence-interval" class="section level2">
+<h2><span class="header-section-number">1.3</span> Confidence Interval</h2>
+<p>Since we make the assumptions that the population variance is known ex ante (along with other necessary assumptions), we can construct a confidence interval using the Z-distribution (standard normal distribution), Z-table, and Z-statistic (Z-score).</p>
+<p>The formula for the Z-statistic is:</p>
+<p><span class="math inline">\(Z = \frac{\bar{x} - \mu}{\frac{\sigma}{\sqrt{n}}}\)</span></p>
+<p>Z follows a normal distribution with mean of 0 and variance of 1.</p>
+</div>
+<div id="suggested-steps" class="section level2">
+<h2><span class="header-section-number">1.4</span> Suggested Steps</h2>
+<p><strong>Point Estimation:</strong></p>
+<ul>
+<li>Make sure you know the population variance ex ante</li>
+<li>Obtain sample data and ensure it is iid. Random samples are usually iid, by definition.</li>
+<li>Check that the sample data fits the normal assumption using methods such as QQ plot</li>
+<li>Calculate the sample mean using the following formula:</li>
+</ul>
+<p><span class="math inline">\(\bar{x} = \frac{\sum^n_{i=1}{x_{i}}}{n}\)</span></p>
+<p><strong>Confidence Interval:</strong></p>
+<ul>
+<li>Continuing from above, now calculate the Z-statistic using:</li>
+<li>Determine</li>
+</ul>
+</div>
+<div id="sources-and-useful-links" class="section level2">
+<h2><span class="header-section-number">1.5</span> Sources and Useful Links</h2>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="inferential-computation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="inferential-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="point-inference-mean-nufu.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -175,7 +247,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/stats-ai003_000_000_000-computational.Rmd",
+"link": "https://github.com/stats-ai002_002_001_001-point-inference-mean-nuf.Rmd",
 "text": "Edit"
 },
 "history": {
