@@ -24,7 +24,7 @@
 <meta name="author" content="https://github.com/statistics-reference/" />
 
 
-<meta name="date" content="2020-09-23" />
+<meta name="date" content="2020-09-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,68 @@
 
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -104,23 +166,24 @@
 <li class="chapter" data-level="6.2.6" data-path="point-inference-mean.html"><a href="point-inference-mean.html#r-n1f"><i class="fa fa-check"></i><b>6.2.6</b> Doing It In R</a></li>
 <li class="chapter" data-level="6.2.7" data-path="point-inference-mean.html"><a href="point-inference-mean.html#sources-n1f"><i class="fa fa-check"></i><b>6.2.7</b> Sources and Useful Links</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="point-inference-mean.html"><a href="point-inference-mean.html#general-univariate-frequentist"><i class="fa fa-check"></i><b>6.3</b> General-Univariate-Frequentist</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="point-inference-mean.html"><a href="point-inference-mean.html#overview-and-summary"><i class="fa fa-check"></i><b>6.3.1</b> Overview and Summary</a></li>
-<li class="chapter" data-level="6.3.2" data-path="point-inference-mean.html"><a href="point-inference-mean.html#point-estimation"><i class="fa fa-check"></i><b>6.3.2</b> Point Estimation</a></li>
-<li class="chapter" data-level="6.3.3" data-path="point-inference-mean.html"><a href="point-inference-mean.html#confidence-interval"><i class="fa fa-check"></i><b>6.3.3</b> Confidence Interval</a></li>
-<li class="chapter" data-level="6.3.4" data-path="point-inference-mean.html"><a href="point-inference-mean.html#hypothesis-testing"><i class="fa fa-check"></i><b>6.3.4</b> Hypothesis Testing</a></li>
-<li class="chapter" data-level="6.3.5" data-path="point-inference-mean.html"><a href="point-inference-mean.html#suggested-steps"><i class="fa fa-check"></i><b>6.3.5</b> Suggested Steps</a></li>
-<li class="chapter" data-level="6.3.6" data-path="point-inference-mean.html"><a href="point-inference-mean.html#sources-and-useful-links"><i class="fa fa-check"></i><b>6.3.6</b> Sources and Useful Links</a></li>
+<li class="chapter" data-level="6.3" data-path="point-inference-mean.html"><a href="point-inference-mean.html#mean-inference-g1f"><i class="fa fa-check"></i><b>6.3</b> General-Univariate-Frequentist</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="point-inference-mean.html"><a href="point-inference-mean.html#overview-g1f"><i class="fa fa-check"></i><b>6.3.1</b> Overview and Summary</a></li>
+<li class="chapter" data-level="6.3.2" data-path="point-inference-mean.html"><a href="point-inference-mean.html#point-estimation-g1f"><i class="fa fa-check"></i><b>6.3.2</b> Point Estimation</a></li>
+<li class="chapter" data-level="6.3.3" data-path="point-inference-mean.html"><a href="point-inference-mean.html#confidence-interval-g1f"><i class="fa fa-check"></i><b>6.3.3</b> Confidence Interval</a></li>
+<li class="chapter" data-level="6.3.4" data-path="point-inference-mean.html"><a href="point-inference-mean.html#hypothesis-testing-g1f"><i class="fa fa-check"></i><b>6.3.4</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="6.3.5" data-path="point-inference-mean.html"><a href="point-inference-mean.html#suggested-steps-g1f"><i class="fa fa-check"></i><b>6.3.5</b> Suggested Steps</a></li>
+<li class="chapter" data-level="6.3.6" data-path="point-inference-mean.html"><a href="point-inference-mean.html#r-g1f"><i class="fa fa-check"></i><b>6.3.6</b> Doing It In R</a></li>
+<li class="chapter" data-level="6.3.7" data-path="point-inference-mean.html"><a href="point-inference-mean.html#sources-g1f"><i class="fa fa-check"></i><b>6.3.7</b> Sources and Useful Links</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="point-inference-mean-diff.html"><a href="point-inference-mean-diff.html"><i class="fa fa-check"></i><b>7</b> Mean Difference Inference</a><ul>
 <li class="chapter" data-level="7.1" data-path="point-inference-mean-diff.html"><a href="point-inference-mean-diff.html#normal-two-population-frequentist-independent-equal-variance"><i class="fa fa-check"></i><b>7.1</b> Normal-Two-Population-Frequentist-Independent-Equal-Variance</a><ul>
-<li class="chapter" data-level="7.1.1" data-path="point-inference-mean.html"><a href="point-inference-mean.html#overview-and-summary"><i class="fa fa-check"></i><b>7.1.1</b> Overview and Summary</a></li>
-<li class="chapter" data-level="7.1.2" data-path="point-inference-mean.html"><a href="point-inference-mean.html#point-estimation"><i class="fa fa-check"></i><b>7.1.2</b> Point Estimation</a></li>
-<li class="chapter" data-level="7.1.3" data-path="point-inference-mean.html"><a href="point-inference-mean.html#confidence-interval"><i class="fa fa-check"></i><b>7.1.3</b> Confidence Interval</a></li>
-<li class="chapter" data-level="7.1.4" data-path="point-inference-mean.html"><a href="point-inference-mean.html#hypothesis-testing"><i class="fa fa-check"></i><b>7.1.4</b> Hypothesis Testing</a></li>
-<li class="chapter" data-level="7.1.5" data-path="point-inference-mean.html"><a href="point-inference-mean.html#suggested-steps"><i class="fa fa-check"></i><b>7.1.5</b> Suggested Steps</a></li>
-<li class="chapter" data-level="7.1.6" data-path="point-inference-mean.html"><a href="point-inference-mean.html#sources-and-useful-links"><i class="fa fa-check"></i><b>7.1.6</b> Sources and Useful Links</a></li>
+<li class="chapter" data-level="7.1.1" data-path="point-inference-mean-diff.html"><a href="point-inference-mean-diff.html#overview-and-summary"><i class="fa fa-check"></i><b>7.1.1</b> Overview and Summary</a></li>
+<li class="chapter" data-level="7.1.2" data-path="point-inference-mean-diff.html"><a href="point-inference-mean-diff.html#point-estimation"><i class="fa fa-check"></i><b>7.1.2</b> Point Estimation</a></li>
+<li class="chapter" data-level="7.1.3" data-path="point-inference-mean-diff.html"><a href="point-inference-mean-diff.html#confidence-interval"><i class="fa fa-check"></i><b>7.1.3</b> Confidence Interval</a></li>
+<li class="chapter" data-level="7.1.4" data-path="point-inference-mean-diff.html"><a href="point-inference-mean-diff.html#hypothesis-testing"><i class="fa fa-check"></i><b>7.1.4</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="7.1.5" data-path="point-inference-mean-diff.html"><a href="point-inference-mean-diff.html#suggested-steps"><i class="fa fa-check"></i><b>7.1.5</b> Suggested Steps</a></li>
+<li class="chapter" data-level="7.1.6" data-path="point-inference-mean-diff.html"><a href="point-inference-mean-diff.html#sources-and-useful-links"><i class="fa fa-check"></i><b>7.1.6</b> Sources and Useful Links</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>Part II.II.I: Statistical Tests</b></span></li>
@@ -327,9 +390,7 @@
 <div id="point-estimation-n1f" class="section level3">
 <h3><span class="header-section-number">6.2.2</span> Point Estimation</h3>
 <p>Most commonly we use the following formula to generate an unbiased estimate of the population mean. The formula is:</p>
-<blockquote>
-<p><span class="math inline">\(\bar{x} = \frac{\sum^n_{i=1}{x_{i}}}{n}\)</span></p>
-</blockquote>
+<p><span class="math display">\[\bar{x} = \frac{\sum^n_{i=1}{x_{i}}}{n}\]</span></p>
 <p>Where:</p>
 <ul>
 <li><span class="math inline">\(\bar{x}\)</span> = unbiased estimate of population mean</li>
@@ -348,9 +409,7 @@
 <div id="confidence-interval-n1f" class="section level3">
 <h3><span class="header-section-number">6.2.3</span> Confidence Interval</h3>
 <p>The formula for the confidence interval given our assumptions is:</p>
-<blockquote>
-<p><span class="math inline">\(\bar{x} \pm t_{\frac{\alpha}{2}, n-1}(\frac{s}{\sqrt{n}})\)</span></p>
-</blockquote>
+<p><span class="math display">\[\bar{x} \pm t_{\frac{\alpha}{2}, n-1}(\frac{s}{\sqrt{n}})\]</span></p>
 <p>Where:</p>
 <ul>
 <li><span class="math inline">\(\bar{x}\)</span> is the sample mean</li>
@@ -373,9 +432,7 @@
 <div id="hypothesis-testing-n1f" class="section level3">
 <h3><span class="header-section-number">6.2.4</span> Hypothesis Testing</h3>
 <p>The formula for the test statistic, in this case the T-statistic, used for hypothesis testing is:</p>
-<blockquote>
-<p><span class="math inline">\(T = \frac{\bar{x} - \mu}{\frac{S}{\sqrt{n}}}\)</span></p>
-</blockquote>
+<p><span class="math display">\[T = \frac{\bar{x} - \mu}{\frac{S}{\sqrt{n}}}\]</span></p>
 <p>Where:</p>
 <ul>
 <li><span class="math inline">\(\bar{x}\)</span> = unbiased estimate of population mean</li>
@@ -386,9 +443,10 @@
 <hr />
 <p><strong>Key Takeaways:</strong></p>
 <ul>
+<li>In the below, “large” T-statistics and T-values is “large” in the absolute sense.</li>
 <li>Large T-statistic values mean that the distance between our sample mean and hypothesized population mean value is large</li>
-<li>The p-value is the probability of seeing a T-value at least as large as the observed T-statistic. Large T-statistics lead to small p-values. Under the p-value method, small p-values suggest a rejection of the null hypothesis as it is highly unlikely that given our sample mean, the population mean is at least as far away as our hypothesized value. Usually, we reject the null hypothesis if the p-value is less than 0.05.</li>
-<li>Under the critical value method, large T-statistics suggest a rejection of the null hypothesis. A large T-statistic suggests that there is a low likelihood that the deviation between the hypothesized value and our sample statistic is that large. Thus, it implies that it is unlikely that the hypothesized value is correct. As a rule of thumb, with a large enough sample size, T-statistics larger than 2 suggests a rejection of the null hypothesis.</li>
+<li>The p-value is the probability of seeing a T-value at least as large as the observed T-statistic. Large T-statistics lead to small p-values. Under the p-value method, small p-values suggest a rejection of the null hypothesis as it is highly unlikely that given our sample mean, the population mean is at least as far away as our hypothesized value. <strong>We reject the null hypothesis if the p-value is less than <span class="math inline">\(\alpha\)</span>.</strong> Usually, we reject the null hypothesis if the p-value is less than 0.05.</li>
+<li>Under the critical value method, large T-statistics suggest a rejection of the null hypothesis. A large T-statistic suggests that there is a low likelihood that the deviation between the hypothesized value and our sample statistic is that large. Thus, it implies that it is unlikely that the hypothesized value is correct. <strong>We reject the null hypothesis if the test statistic is larger in absolute value than the critical value.</strong> As a rule of thumb, with a large enough sample size, T-statistics larger than 2 suggests a rejection of the null hypothesis.</li>
 </ul>
 <hr />
 </div>
@@ -419,7 +477,7 @@
 </div>
 <div id="r-n1f" class="section level3">
 <h3><span class="header-section-number">6.2.6</span> Doing It In R</h3>
-<p>Coming soon</p>
+<p>We can do T-tests in base R using <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test">t.test()</a>. In this example, I simulate our observations from a normal distribution. x in the below is a vector of sample data.</p>
 </div>
 <div id="sources-n1f" class="section level3">
 <h3><span class="header-section-number">6.2.7</span> Sources and Useful Links</h3>
@@ -430,94 +488,165 @@
 <p><strong>Useful Links:</strong></p>
 <ul>
 <li><a href="https://stats.stackexchange.com/questions/85804/choosing-between-z-test-and-t-test" class="uri">https://stats.stackexchange.com/questions/85804/choosing-between-z-test-and-t-test</a></li>
+<li><a href="https://en.wikibooks.org/wiki/Statistics/Testing_Data/t-tests" class="uri">https://en.wikibooks.org/wiki/Statistics/Testing_Data/t-tests</a></li>
+<li><a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test" class="uri">https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test</a></li>
 </ul>
 
 </div>
 </div>
-<div id="general-univariate-frequentist" class="section level2">
+<div id="mean-inference-g1f" class="section level2">
 <h2><span class="header-section-number">6.3</span> General-Univariate-Frequentist</h2>
-<p>This section covers estimating the population mean under the following assumptions and conditions:</p>
+<p>This section covers population mean inference when we do not make any prior assumptions about the distribution of the population. More specifically, mean inference is performed under the following assumptions and conditions:</p>
 <p><strong>Assumptions:</strong></p>
 <ul>
 <li>Population can follow any shaped distribution with finite mean (not necessarily normal)</li>
 <li>Observations are iid</li>
-<li>Population variance can be known or unknown (check if it can be finite or infinite)</li>
+<li>Sample size must be large enough or one should use a non-parametric method</li>
+<li>Population variance can be known or unknown (and must be finite)</li>
 </ul>
 <p><strong>Other Conditions, Criteria, or Attributes:</strong></p>
 <ul>
 <li>Univariate mean inference</li>
 <li>Frequentist perspective</li>
 </ul>
-<hr />
-<p><strong>For mean inference under other assumptions and conditions, please visit:</strong></p>
-<ul>
-<li>Mean Inference (n.u.f): normal, iid, univariate, frequentist, known variance</li>
-<li>Mean Inference (n.u.f.u): normal, iid, univariate, frequentist, unknown variance</li>
-<li>Mean Inference (g.u.f): general, iid, univariate, frequentist</li>
-</ul>
-<div id="overview-and-summary" class="section level3">
+<div id="overview-g1f" class="section level3">
 <h3><span class="header-section-number">6.3.1</span> Overview and Summary</h3>
+<p>Under the assumptions above, inference can be done using the T-statistic and T-distribution.</p>
 <p><strong>Key Takeaways:</strong></p>
 <ul>
 <li>With the shape of the population distribution unknown, we will always use the T-statistic and T-distribution to create the confidence interval. This is true regardless if we know the population variance or not.</li>
 <li>When your sample size exceeds 30 or so (need citation), the results from doing a T-test will be very similar to the results from a Z-test. This is because the T-distribution converges to a Z-distribution (standard normal distribution) as your sample size increases.</li>
-<li>The rule of thumb is 30, but in practice it will depend on the skewness of the population distribution. The more skewed your population is, there more samples we need. (need citation) make sure not confuse with CLT. With sample sizes much larger than 30, we could use the Z-statistic for hypothesis testing and confidence interval building but it’s usually just easier to always use the T-statistic.</li>
+<li>The rule of thumb is 30, but in practice it will depend on the skewness of the population distribution. The more skewed your population is, the more samples we need. (need citation) make sure not confuse with CLT. With sample sizes much larger than 30, we could use the Z-statistic for hypothesis testing and confidence interval building but it’s usually safer to always use the T-statistic.</li>
 </ul>
 <hr />
-<p><strong>Overview and Summary:</strong></p>
-<p>Here we discuss how to perform univariate mean inference when the population can be any shaped distribution (with finite mean) and our observations are iid. Inference is done from a frequentist’s perspective. This is a common way to perform mean inference.</p>
 </div>
-<div id="point-estimation" class="section level3">
+<div id="point-estimation-g1f" class="section level3">
 <h3><span class="header-section-number">6.3.2</span> Point Estimation</h3>
+<p>Most commonly we use the following formula to generate an unbiased estimate of the population mean. The formula is:</p>
+<p><span class="math display">\[\bar{x} = \frac{\sum^n_{i=1}{x_{i}}}{n}\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\bar{x}\)</span> = unbiased estimate of population mean</li>
+<li><span class="math inline">\(n\)</span> = sample size</li>
+<li><span class="math inline">\(x_{i}\)</span> = your sample observations</li>
+</ul>
+<p>The formula above not only produces an unbiased estimate under the assumptions in this section, but <em>always</em> produces an unbiased estimate of the population mean no matter the distribution (as long as the population mean exists).</p>
+<hr />
 <p><strong>Key Takeaways:</strong></p>
 <ul>
-<li>Under normal assumption, both maximum likelihood estimation and method of moments will result in the same estimate of the mean as the above formula.</li>
-<li>The above formula will produce an unbiased estimate no matter what the population distribution is. Proof.</li>
+<li>The above formula will produce an unbiased estimate no matter what the population distribution is.</li>
+<li>While you could use maximum likelihood estimation, method of moments, or other estimation techniques to produce a point estimate for the population mean, in practice we just use the formula above. Under the normal assumption, both maximum likelihood estimation and method of moments will result in the same estimate of the mean as the formula above.</li>
 </ul>
 <hr />
-<p><strong>Point Estimation:</strong></p>
-<p>The following formula can be used to calculate an unbiased estimate of the population mean using sample data:</p>
-<p><span class="math inline">\(\bar{x} = \frac{\sum^n_{i=1}{x_{i}}}{n}\)</span></p>
-<p>Where:</p>
-<ul>
-<li><span class="math inline">\(\bar{x}\)</span> = unbiased estimate of population mean</li>
-<li><span class="math inline">\(n\)</span> = sample size</li>
-<li><span class="math inline">\(x_{i}\)</span> = your observations</li>
-</ul>
-<p>The formula above not only produces an unbiased estimate under the assumptions on this page, but always produces an unbiased estimate of the population mean no matter the distribution (as long as the population mean exists).</p>
 </div>
-<div id="confidence-interval" class="section level3">
+<div id="confidence-interval-g1f" class="section level3">
 <h3><span class="header-section-number">6.3.3</span> Confidence Interval</h3>
-<p>With unknown population distribution, we construct a confidence interval using the T-distribution and T-table.</p>
-<p>The formula for the T-statistic is:</p>
-<p><span class="math inline">\(T = \frac{\bar{x} - \mu}{\frac{S}{\sqrt{n}}}\)</span></p>
+<p>The formula for the confidence interval given our assumptions is:</p>
+<p><span class="math display">\[\bar{x} \pm t_{\frac{\alpha}{2}, n-1}(\frac{s}{\sqrt{n}})\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\bar{x}\)</span> is the sample mean</li>
+<li><span class="math inline">\(\alpha\)</span> is the significance level</li>
+<li><span class="math inline">\(s\)</span> is the sample standard deviation using the corrected sample standard deviation formula</li>
+<li><span class="math inline">\(n\)</span> is the sample size</li>
+<li><span class="math inline">\(t\)</span> comes from a t-distribution with <span class="math inline">\(n - 1\)</span> degrees of freedom</li>
+</ul>
+<p>Like constructing all confidence intervals, we choose a level of <span class="math inline">\(\alpha\)</span> (Type I error) first, then build the interval. The confidence interval gives us a range around our sample estimate with a (1 - <span class="math inline">\(\alpha\)</span>) probability that it will capture the true population parameter.</p>
+<hr />
+<p><strong>Key Takeaways:</strong></p>
+<ul>
+<li>We always use the T-distribution to build a confidence interval in this situation.</li>
+<li>The expression for confidence interval uses a rearrangement of the formula for the <span class="math inline">\(T\)</span> statistic. The <span class="math inline">\(T\)</span> statistic relates <span class="math inline">\(\bar{x}\)</span> with our hypothesized value for the population mean, <span class="math inline">\(\mu\)</span>.</li>
+<li>When it comes to interpretation, from a frequentist standpoint, the confidence interval is not the probability that the population will fall into the range. Instead, it is the probability that our confidence interval captures the population parameter. That’s because what’s random is our sample, not the population parameter.</li>
+</ul>
+<hr />
+</div>
+<div id="hypothesis-testing-g1f" class="section level3">
+<h3><span class="header-section-number">6.3.4</span> Hypothesis Testing</h3>
+<p>The formula for the test statistic, in this case the T-statistic, used for hypothesis testing is:</p>
+<p><span class="math display">\[T = \frac{\bar{x} - \mu}{\frac{S}{\sqrt{n}}}\]</span></p>
 <p>Where:</p>
 <ul>
 <li><span class="math inline">\(\bar{x}\)</span> = unbiased estimate of population mean</li>
 <li><span class="math inline">\(n\)</span> = sample size</li>
-<li><span class="math inline">\(S\)</span> = sample standard deviation using the following formula</li>
+<li><span class="math inline">\(S\)</span> = sample standard deviation using the corrected sample standard deviation formula</li>
 </ul>
+<p>T follows a Student’s T-distribution with <span class="math inline">\(n-1\)</span> degrees of freedom. For hypothesis testing, we either use T to determine a p-value. Or we see if T exceeds a certain threshold value.</p>
+<hr />
+<p><strong>Key Takeaways:</strong></p>
+<ul>
+<li>In the below, “large” T-statistics and T-values is “large” in the absolute sense.</li>
+<li>Large T-statistic values mean that the distance between our sample mean and hypothesized population mean value is large</li>
+<li>The p-value is the probability of seeing a T-value at least as large as the observed T-statistic. Large T-statistics lead to small p-values. Under the p-value method, small p-values suggest a rejection of the null hypothesis as it is highly unlikely that given our sample mean, the population mean is at least as far away as our hypothesized value. <strong>We reject the null hypothesis if the p-value is less than <span class="math inline">\(\alpha\)</span>.</strong> Usually, we reject the null hypothesis if the p-value is less than 0.05.</li>
+<li>Under the critical value method, large T-statistics suggest a rejection of the null hypothesis. A large T-statistic suggests that there is a low likelihood that the deviation between the hypothesized value and our sample statistic is that large. Thus, it implies that it is unlikely that the hypothesized value is correct. <strong>We reject the null hypothesis if the test statistic is larger in absolute value than the critical value.</strong> As a rule of thumb, with a large enough sample size, T-statistics larger than 2 suggests a rejection of the null hypothesis.</li>
+</ul>
+<hr />
 </div>
-<div id="hypothesis-testing" class="section level3">
-<h3><span class="header-section-number">6.3.4</span> Hypothesis Testing</h3>
-<p>With unknown population distribution, we can perform hypothesis testing using the T-distribution, T-table, and T-statistic (T-score).</p>
-</div>
-<div id="suggested-steps" class="section level3">
+<div id="suggested-steps-g1f" class="section level3">
 <h3><span class="header-section-number">6.3.5</span> Suggested Steps</h3>
+<p>Here are some suggested steps for performing mean inference in practice.</p>
 <p><strong>Point Estimation:</strong></p>
 <ul>
 <li>Obtain sample data and ensure it is iid. Random samples are usually iid, by definition.</li>
-<li>Calculate the sample mean using the following formula:</li>
+<li>Check the sample data to see if it is skewed. More skewed data means you need a larger</li>
+<li>Calculate the sample mean</li>
 </ul>
-<p><span class="math inline">\(\bar{x} = \frac{\sum^n_{i=1}{x_{i}}}{n}\)</span></p>
 <p><strong>Confidence Interval:</strong></p>
 <ul>
-<li>Continuing from above, now calculate the confidence interval using:</li>
-<li></li>
+<li>Continuing from above…</li>
+<li>Choose an <span class="math inline">\(\alpha\)</span></li>
+<li>Construct the confidence interval</li>
+<li>The confidence interval is a range that has a <span class="math inline">\((1 - \alpha)\)</span> percent chance of capturing the true population mean</li>
+</ul>
+<p><strong>Hypothesis Testing:</strong></p>
+<ul>
+<li>Continuing from above…</li>
+<li>Set up your <span class="math inline">\(H_{0}\)</span> and <span class="math inline">\(H_{a}\)</span> statements</li>
+<li>Calculate the T-statistic</li>
+<li>Using either statistical software or the T-Table, use either the p-value or critical value method to determine whether or not to reject your null hypothesis</li>
+<li>Interpret your results</li>
 </ul>
 </div>
-<div id="sources-and-useful-links" class="section level3">
-<h3><span class="header-section-number">6.3.6</span> Sources and Useful Links</h3>
+<div id="r-g1f" class="section level3">
+<h3><span class="header-section-number">6.3.6</span> Doing It In R</h3>
+<p>We can do T-tests in base R using <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test">t.test()</a>. In this example, I simulate our observations from a beta distribution with shape parameters <span class="math inline">\(\alpha = 1\)</span> and <span class="math inline">\(\beta = 5\)</span>, resulting in a skewed distribution. We know that the true population mean of such a distribution is <span class="math inline">\(\frac{1}{(1 + 5)} \approx 0.1667\)</span>. <span class="math inline">\(x\)</span> in the below is a vector of sample data from this beta distribution.</p>
+<p>In the example below, we build a confidence interval with <span class="math inline">\(\alpha = 0.05\)</span>. We also do a two-sided T-test with <span class="math inline">\(\alpha = 0.05\)</span> and our hypothesis testing statements as:</p>
+<p><span class="math display">\[H_o = 0.25\]</span>
+<span class="math display">\[H_a = \neq 0.25\]</span></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">set.seed</span>(<span class="dv">7</span>)  <span class="co"># allows you to reproduce the results</span></a>
+<a class="sourceLine" id="cb1-2" title="2">x =<span class="st"> </span><span class="kw">rbeta</span>(<span class="dv">30</span>, <span class="dv">1</span>, <span class="dv">5</span>)  <span class="co"># generate 30 observations from beta(1, 5)</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">t.test</span>(x,  <span class="co"># vector of data</span></a>
+<a class="sourceLine" id="cb1-4" title="4">       <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>, <span class="co"># one or two sided test</span></a>
+<a class="sourceLine" id="cb1-5" title="5">       <span class="dt">mu =</span> <span class="fl">0.25</span>,  <span class="co"># hypothesized population mean value</span></a>
+<a class="sourceLine" id="cb1-6" title="6">       <span class="dt">conf.level  =</span> <span class="fl">0.95</span>  <span class="co"># confidence level, (1 - alpha)</span></a>
+<a class="sourceLine" id="cb1-7" title="7">       )</a></code></pre></div>
+<pre><code>|  
+|  	One Sample t-test
+|  
+|  data:  x
+|  t = -2.3251, df = 29, p-value = 0.02727
+|  alternative hypothesis: true mean is not equal to 0.25
+|  95 percent confidence interval:
+|   0.1117072 0.2411425
+|  sample estimates:
+|  mean of x 
+|  0.1764248</code></pre>
+<p><strong>Confidence Interval:</strong></p>
+<p>The output shows what our confidence interval and sample mean are. Our sample mean is <span class="math inline">\(0.1764\)</span> and confidence interval ranges from <span class="math inline">\(0.117\)</span> to <span class="math inline">\(0.2411\)</span>. This implies that there is a 95% chance that our confidence interval contains the true population mean.</p>
+<p><strong>Hypothesis Testing:</strong>
+Using the critical value method, we see that our T-statistic is <span class="math inline">\(-2.3252\)</span>, which is larger in absolute value than the critical value of <span class="math inline">\(2.045\)</span>, meaning we reject the null hypothesis. This means it is unlikely that the true population mean is <span class="math inline">\(0.25\)</span> given our sample mean of <span class="math inline">\(0.1764\)</span>. Using the p-value method, we see that our p-value is <span class="math inline">\(0.0273\)</span>, which is less than our <span class="math inline">\(\alpha\)</span> of <span class="math inline">\(0.05\)</span>. This also means we reject the null hypothesis.</p>
+</div>
+<div id="sources-g1f" class="section level3">
+<h3><span class="header-section-number">6.3.7</span> Sources and Useful Links</h3>
+<p><strong>Sources:</strong></p>
+<ul>
+<li>Degroot: Probability And Statistics (4th) - DeGroot, Schervish</li>
+</ul>
+<p><strong>Useful Links:</strong></p>
+<ul>
+<li><a href="https://stats.stackexchange.com/questions/85804/choosing-between-z-test-and-t-test" class="uri">https://stats.stackexchange.com/questions/85804/choosing-between-z-test-and-t-test</a></li>
+<li><a href="https://en.wikibooks.org/wiki/Statistics/Testing_Data/t-tests" class="uri">https://en.wikibooks.org/wiki/Statistics/Testing_Data/t-tests</a></li>
+</ul>
 
 </div>
 </div>
