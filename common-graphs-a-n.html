@@ -24,7 +24,7 @@
 <meta name="author" content="https://github.com/statistics-reference/" />
 
 
-<meta name="date" content="2020-09-26" />
+<meta name="date" content="2020-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -281,35 +281,84 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="bar-chart" class="section level2">
 <h2><span class="header-section-number">4.2</span> Bar Chart</h2>
+<p>An example of a bar chart is shown below:</p>
+<p><img src="statistics-reference_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <div id="overview-bar-chart" class="section level3">
 <h3><span class="header-section-number">4.2.1</span> Overview and Summary</h3>
-<p>Bar charts are used as a way to show the “count” of a categorical variable.</p>
+<p>Bar charts are used to compare categorical variables. Usually on one axis is the categorical variable and on the other axis is a quantitative measure of that variable such as a count or the mean. Bar charts with the categorical variable on the x-axis are sometimes called column charts while bar charts with categorical variables on the y-axis are sometimes called row charts. In the above, we see a column chart with the categorical variable on the x-axis.</p>
+<p><strong>Bar charts are very similar to histograms except that typically histograms are used to depict quantitative variables as opposed to categorical variables.</strong></p>
 </div>
 <div id="applications-bar-chart" class="section level3">
 <h3><span class="header-section-number">4.2.2</span> Common Applications</h3>
+<p>Bar charts are useful to sumarize and compare groups (or levels) of a categorical variable.</p>
 </div>
 <div id="interpretation-bar-chart" class="section level3">
 <h3><span class="header-section-number">4.2.3</span> Interpretation</h3>
-<p>Generally, the height of a bar chart also includes a number the bar corresponds to. This number most frequently refers to the count of the category. <strong>Do be careful during interpretation to examine the labels on the Y-axis.</strong> It is possible that the Y-axis does not start at zero, thus leading to deceiving bar heights.</p>
+<p>Generally, the height of a bar corresponds to the value of the quantitative measure. <strong>Do be careful during interpretation to examine the range on the axis for the quantitative measure.</strong> It is possible that the axis does not start at zero, thus leading to deceiving bar heights. This is seen below.</p>
+<p>In the below, we see two charts that depict the exact same data and information. On the left, the bar chart has a y-axis ranging from 0 to 30. Note that the values are actually pretty similar to each other. On the right, we changed the range of the y-axis to be between 10 and 30. Note how visually, now it seems that the values are now much further from each other. The middle bar looks like it is less than 4 times the height of other bars.</p>
+<p><img src="statistics-reference_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Typically, practitioners do not adjust the y-axis to disort bar heights.</p>
 </div>
 <div id="r-bar-chart" class="section level3">
 <h3><span class="header-section-number">4.2.4</span> Doing It In R</h3>
+<p>In the below, we create bar charts where the categorical variable is planets using R. The below depict the number of hours in a day for different planets. Data is pulled on 9/27/2020 from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">NASA</a>.</p>
 <div id="bar-chart-in-base-r" class="section level4">
 <h4><span class="header-section-number">4.2.4.1</span> Bar Chart In Base R</h4>
+<p>Barcharts in base R can be created with the <a href="https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/barplot"><em>barplot()</em></a> function. The below is an example with code.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">hours =<span class="st"> </span><span class="kw">c</span>(<span class="dv">24</span>, <span class="fl">24.7</span>, <span class="fl">10.7</span>, <span class="fl">17.2</span>, <span class="fl">16.1</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2">planets =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Earth&quot;</span>, <span class="st">&quot;Mars&quot;</span>, <span class="st">&quot;Saturn&quot;</span>, <span class="st">&quot;Uranus&quot;</span>, <span class="st">&quot;Neptune&quot;</span> )</a>
+<a class="sourceLine" id="cb1-3" title="3">display_color =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;#EB984E&quot;</span>, <span class="st">&quot;#1ABC9C&quot;</span>, <span class="st">&quot;#95A5A6&quot;</span>, <span class="st">&quot;#3498DB&quot;</span>, <span class="st">&quot;#F1C40F&quot;</span>)</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="kw">barplot</span>(<span class="dt">height =</span> hours, <span class="co"># vector of numerical data</span></a>
+<a class="sourceLine" id="cb1-5" title="5">        <span class="dt">space =</span> <span class="dv">1</span>, <span class="co"># changes the space between each bar</span></a>
+<a class="sourceLine" id="cb1-6" title="6">        <span class="dt">names.arg =</span> planets, <span class="co"># adds labels for the bars</span></a>
+<a class="sourceLine" id="cb1-7" title="7">        <span class="dt">horiz =</span> <span class="ot">FALSE</span>, <span class="co"># FALSE means bars are drawn vertically</span></a>
+<a class="sourceLine" id="cb1-8" title="8">        <span class="dt">col =</span> display_color, <span class="co"># vector of colors for your bars</span></a>
+<a class="sourceLine" id="cb1-9" title="9">        <span class="dt">xlab =</span> <span class="st">&quot;Planets&quot;</span>, <span class="co"># label for x-axis</span></a>
+<a class="sourceLine" id="cb1-10" title="10">        <span class="dt">ylab =</span> <span class="st">&quot;Hours In A Day&quot;</span>, <span class="co"># label for y-axis</span></a>
+<a class="sourceLine" id="cb1-11" title="11">        <span class="dt">main =</span> <span class="st">&quot;How Long Are Days On Planets?&quot;</span>, <span class="co"># title of chart</span></a>
+<a class="sourceLine" id="cb1-12" title="12">        <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">30</span>), <span class="co"># range for the y-axis</span></a>
+<a class="sourceLine" id="cb1-13" title="13">        <span class="dt">border =</span> <span class="ot">NA</span>) <span class="co"># adjusts the borders of your bars</span></a></code></pre></div>
+<p><img src="statistics-reference_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
 <div id="bar-chart-in-ggplot2" class="section level4">
 <h4><span class="header-section-number">4.2.4.2</span> Bar Chart In ggplot2</h4>
+<p>Within the package ggplot2, barcharts can be created with the <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html"><em>geom_bar()</em></a> or <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html"><em>geom_col()</em></a> function. The below is an example with code.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(ggplot2) <span class="co"># import ggplot2</span></a>
+<a class="sourceLine" id="cb2-2" title="2">df =<span class="st"> </span><span class="kw">data.frame</span>(<span class="st">&quot;Planets&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Earth&quot;</span>, <span class="st">&quot;Mars&quot;</span>, <span class="st">&quot;Saturn&quot;</span>, <span class="st">&quot;Uranus&quot;</span>, <span class="st">&quot;Neptune&quot;</span> ),</a>
+<a class="sourceLine" id="cb2-3" title="3">                <span class="st">&quot;Hours In A Day&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">24</span>, <span class="fl">24.7</span>, <span class="fl">10.7</span>, <span class="fl">17.2</span>, <span class="fl">16.1</span>), <span class="dt">check.names =</span> <span class="ot">FALSE</span>) <span class="co"># create dataframe of data</span></a>
+<a class="sourceLine" id="cb2-4" title="4">display_color =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;#EB984E&quot;</span>, <span class="st">&quot;#1ABC9C&quot;</span>, <span class="st">&quot;#95A5A6&quot;</span>, <span class="st">&quot;#3498DB&quot;</span>, <span class="st">&quot;#F1C40F&quot;</span>) <span class="co"># colors for bars</span></a>
+<a class="sourceLine" id="cb2-5" title="5">g =<span class="st"> </span><span class="kw">ggplot</span>(df, <span class="kw">aes_string</span>(<span class="dt">x =</span> <span class="st">&quot;Planets&quot;</span>, <span class="co"># data on x-axis</span></a>
+<a class="sourceLine" id="cb2-6" title="6">                          <span class="dt">y =</span> <span class="st">&quot;`Hours In A Day`&quot;</span>)) <span class="co"># data on y-axis</span></a>
+<a class="sourceLine" id="cb2-7" title="7">g =<span class="st"> </span>g <span class="op">+</span><span class="st"> </span><span class="kw">geom_col</span>(<span class="dt">fill =</span> display_color, <span class="co"># change the color of the bar</span></a>
+<a class="sourceLine" id="cb2-8" title="8">                 <span class="dt">width =</span> <span class="fl">0.7</span>) <span class="co"># change width of bar</span></a>
+<a class="sourceLine" id="cb2-9" title="9">g =<span class="st"> </span>g <span class="op">+</span><span class="st"> </span><span class="kw">ggtitle</span>(<span class="st">&quot;How Long Are Days On Planets?&quot;</span>)  <span class="co"># add title</span></a>
+<a class="sourceLine" id="cb2-10" title="10">g =<span class="st"> </span>g <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">panel.background =</span> <span class="kw">element_rect</span>(<span class="dt">fill=</span><span class="st">&#39;#FFFFFF&#39;</span>, <span class="dt">colour=</span><span class="st">&#39;#95A5A6&#39;</span>)) <span class="co"># edit background color</span></a>
+<a class="sourceLine" id="cb2-11" title="11">g =<span class="st"> </span>g <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">expand =</span> <span class="kw">expansion</span>(<span class="dt">mult =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">.1</span>)), <span class="co"># stretch plot to fit grid</span></a>
+<a class="sourceLine" id="cb2-12" title="12">                           <span class="dt">breaks =</span> <span class="kw">round</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">30</span>, <span class="dt">by =</span> <span class="dv">5</span>),<span class="dv">1</span>)) <span class="co"># change interval for y-axis</span></a>
+<a class="sourceLine" id="cb2-13" title="13">g =<span class="st"> </span>g <span class="op">+</span><span class="st">   </span><span class="kw">theme</span>(<span class="dt">axis.line =</span> <span class="kw">element_line</span>(<span class="dt">colour =</span> <span class="st">&quot;#95A5A6&quot;</span>),</a>
+<a class="sourceLine" id="cb2-14" title="14">                <span class="dt">panel.grid.major =</span> <span class="kw">element_blank</span>(),</a>
+<a class="sourceLine" id="cb2-15" title="15">                <span class="dt">panel.grid.minor =</span> <span class="kw">element_blank</span>(),</a>
+<a class="sourceLine" id="cb2-16" title="16">                <span class="dt">panel.border =</span> <span class="kw">element_blank</span>(),</a>
+<a class="sourceLine" id="cb2-17" title="17">                <span class="dt">panel.background =</span> <span class="kw">element_blank</span>(),</a>
+<a class="sourceLine" id="cb2-18" title="18">                <span class="dt">text =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">12</span>,  <span class="dt">family =</span> <span class="st">&quot;sans&quot;</span>)) <span class="co"># change font</span></a>
+<a class="sourceLine" id="cb2-19" title="19">g</a></code></pre></div>
+<p><img src="statistics-reference_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 </div>
 <div id="sources-bar-chart" class="section level3">
 <h3><span class="header-section-number">4.2.5</span> Sources and Useful Links</h3>
 <p><strong>Sources:</strong></p>
 <ul>
-<li></li>
+<li><a href="https://en.wikipedia.org/wiki/Bar_chart" class="uri">https://en.wikipedia.org/wiki/Bar_chart</a></li>
 </ul>
 <p><strong>Useful Links:</strong></p>
 <ul>
-<li></li>
+<li><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_bar.html</a></li>
+<li><a href="http://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html" class="uri">http://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html</a></li>
+<li><a href="https://rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf" class="uri">https://rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf</a></li>
+<li><a href="https://stackoverflow.com/questions/20220424/ggplot2-bar-plot-no-space-between-bottom-of-geom-and-x-axis-keep-space-above/50697152" class="uri">https://stackoverflow.com/questions/20220424/ggplot2-bar-plot-no-space-between-bottom-of-geom-and-x-axis-keep-space-above/50697152</a></li>
+<li><a href="https://stackoverflow.com/questions/32941670/width-and-gap-of-geom-bar-ggplot2" class="uri">https://stackoverflow.com/questions/32941670/width-and-gap-of-geom-bar-ggplot2</a></li>
+<li><a href="https://stackoverflow.com/questions/10861773/remove-grid-background-color-and-top-and-right-borders-from-ggplot2" class="uri">https://stackoverflow.com/questions/10861773/remove-grid-background-color-and-top-and-right-borders-from-ggplot2</a></li>
 </ul>
 
 </div>

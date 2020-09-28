@@ -24,7 +24,7 @@
 <meta name="author" content="https://github.com/statistics-reference/" />
 
 
-<meta name="date" content="2020-09-26" />
+<meta name="date" content="2020-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -643,13 +643,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In the example below, we build a confidence interval with <span class="math inline">\(\alpha = 0.05\)</span>. We also do a two-sided T-test with <span class="math inline">\(\alpha = 0.05\)</span> and our hypothesis testing statements as:</p>
 <p><span class="math display">\[H_o = 0.25\]</span>
 <span class="math display">\[H_a = \neq 0.25\]</span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">set.seed</span>(<span class="dv">7</span>)  <span class="co"># allows you to reproduce the results</span></a>
-<a class="sourceLine" id="cb1-2" title="2">x =<span class="st"> </span><span class="kw">rbeta</span>(<span class="dv">30</span>, <span class="dv">1</span>, <span class="dv">5</span>)  <span class="co"># generate 30 observations from beta(1, 5)</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="kw">t.test</span>(x,  <span class="co"># vector of data</span></a>
-<a class="sourceLine" id="cb1-4" title="4">       <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>, <span class="co"># one or two sided test</span></a>
-<a class="sourceLine" id="cb1-5" title="5">       <span class="dt">mu =</span> <span class="fl">0.25</span>,  <span class="co"># hypothesized population mean value</span></a>
-<a class="sourceLine" id="cb1-6" title="6">       <span class="dt">conf.level  =</span> <span class="fl">0.95</span>  <span class="co"># confidence level, (1 - alpha)</span></a>
-<a class="sourceLine" id="cb1-7" title="7">       )</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">set.seed</span>(<span class="dv">7</span>)  <span class="co"># allows you to reproduce the results</span></a>
+<a class="sourceLine" id="cb3-2" title="2">x =<span class="st"> </span><span class="kw">rbeta</span>(<span class="dv">30</span>, <span class="dv">1</span>, <span class="dv">5</span>)  <span class="co"># generate 30 observations from beta(1, 5)</span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw">t.test</span>(x,  <span class="co"># vector of data</span></a>
+<a class="sourceLine" id="cb3-4" title="4">       <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>, <span class="co"># one or two sided test</span></a>
+<a class="sourceLine" id="cb3-5" title="5">       <span class="dt">mu =</span> <span class="fl">0.25</span>,  <span class="co"># hypothesized population mean value</span></a>
+<a class="sourceLine" id="cb3-6" title="6">       <span class="dt">conf.level  =</span> <span class="fl">0.95</span>  <span class="co"># confidence level, (1 - alpha)</span></a>
+<a class="sourceLine" id="cb3-7" title="7">       )</a></code></pre></div>
 <pre><code>|  
 |  	One Sample t-test
 |  
