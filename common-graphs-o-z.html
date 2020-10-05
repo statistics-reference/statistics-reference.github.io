@@ -24,7 +24,7 @@
 <meta name="author" content="https://github.com/statistics-reference/" />
 
 
-<meta name="date" content="2020-09-27" />
+<meta name="date" content="2020-10-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -157,6 +157,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.4" data-path="common-graphs-a-n.html"><a href="common-graphs-a-n.html#r-bar-chart"><i class="fa fa-check"></i><b>4.2.4</b> Doing It In R</a></li>
 <li class="chapter" data-level="4.2.5" data-path="common-graphs-a-n.html"><a href="common-graphs-a-n.html#sources-bar-chart"><i class="fa fa-check"></i><b>4.2.5</b> Sources and Useful Links</a></li>
 </ul></li>
+<li class="chapter" data-level="4.3" data-path="common-graphs-a-n.html"><a href="common-graphs-a-n.html#bubble-chart"><i class="fa fa-check"></i><b>4.3</b> Bubble Chart</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="common-graphs-a-n.html"><a href="common-graphs-a-n.html#overview-bubble-chart"><i class="fa fa-check"></i><b>4.3.1</b> Overview and Summary</a></li>
+<li class="chapter" data-level="4.3.2" data-path="common-graphs-a-n.html"><a href="common-graphs-a-n.html#applications-bubble-chart"><i class="fa fa-check"></i><b>4.3.2</b> Common Applications</a></li>
+<li class="chapter" data-level="4.3.3" data-path="common-graphs-a-n.html"><a href="common-graphs-a-n.html#interpretation-bubble-chart"><i class="fa fa-check"></i><b>4.3.3</b> Interpretation</a></li>
+<li class="chapter" data-level="4.3.4" data-path="common-graphs-a-n.html"><a href="common-graphs-a-n.html#r-bubble-chart"><i class="fa fa-check"></i><b>4.3.4</b> Doing It In R</a></li>
+<li class="chapter" data-level="4.3.5" data-path="common-graphs-a-n.html"><a href="common-graphs-a-n.html#sources-bubble-chart"><i class="fa fa-check"></i><b>4.3.5</b> Sources and Useful Links</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="common-graphs-o-z.html"><a href="common-graphs-o-z.html"><i class="fa fa-check"></i><b>5</b> Common Graphs (O to Z)</a><ul>
 <li class="chapter" data-level="5.1" data-path="common-graphs-o-z.html"><a href="common-graphs-o-z.html#pie-chart"><i class="fa fa-check"></i><b>5.1</b> Pie Chart</a><ul>
@@ -245,32 +252,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="common-graphs-o-z" class="section level1">
 <h1><span class="header-section-number">5</span> Common Graphs (O to Z)</h1>
-<p>This section covers covers common graphs and visualization techniques for examining your sample data.</p>
+<p>This section covers common graphs and visualization techniques for examining and summarizing your data. Graphs range from O to Z.</p>
 <p><strong>Visualization Techniques:</strong></p>
 <ul>
-<li>Bar Charts:</li>
-<li>Histograms:</li>
+<li>Pie Charts:</li>
 </ul>
 <div id="pie-chart" class="section level2">
 <h2><span class="header-section-number">5.1</span> Pie Chart</h2>
+<p>An example of a pie chart is shown below:</p>
+<p><img src="statistics-reference_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <div id="overview-pie-chart" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Overview and Summary</h3>
+<p>Pie charts are used to display proportions or percentages. Each “slice” of a pie represents a different category and will have an associated percentage.</p>
 </div>
 <div id="applications-pie-chart" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Common Applications</h3>
+<p>Pie charts are useful to summarize and compare categories in percentage or relative terms.</p>
 </div>
 <div id="interpretation-pie-chart" class="section level3">
 <h3><span class="header-section-number">5.1.3</span> Interpretation</h3>
+<p>Generally, the size of a slice corresponds to the proportion of the category relative to others. While pie charts are useful at a glance, it can be difficult to determine exactly how much larger or smaller one category is.</p>
 </div>
 <div id="r-pie-chart" class="section level3">
 <h3><span class="header-section-number">5.1.4</span> Doing It In R</h3>
-<p>Coming soon</p>
+<p>In the below, we create pie charts that break down the GDP of Mauritania by sector. Data is pulled on 10/04/2020 from <a href="https://en.wikipedia.org/wiki/Economy_of_Mauritania">Wikipedia</a>.</p>
+<div id="pie-chart-in-base-r" class="section level4">
+<h4><span class="header-section-number">5.1.4.1</span> Pie Chart In Base R</h4>
+<p>Pie charts in base R can be created with the <a href="https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/pie"><em>pie()</em></a> function. The below is an example with code. To build one, you need a vector of values and a vector of labels. The vector of values do NOT have to be in percent form. They can be the original values - R will automatically scale them within the pie chart.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">values =<span class="st"> </span><span class="kw">c</span>(<span class="fl">14.9</span>, <span class="fl">48.0</span>, <span class="fl">37.1</span>)</a>
+<a class="sourceLine" id="cb5-2" title="2">sectors =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Agriculture&quot;</span>, <span class="st">&quot;Industry&quot;</span>, <span class="st">&quot;Services&quot;</span>)</a>
+<a class="sourceLine" id="cb5-3" title="3">display_color =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;#EB984E&quot;</span>, <span class="st">&quot;#1ABC9C&quot;</span>, <span class="st">&quot;#95A5A6&quot;</span>)</a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="kw">pie</span>(<span class="dt">x =</span> values,  <span class="co"># vector of data</span></a>
+<a class="sourceLine" id="cb5-5" title="5">    <span class="dt">labels =</span> <span class="kw">paste0</span>(sectors, <span class="st">&quot; - &quot;</span>, <span class="kw">round</span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span>values<span class="op">/</span><span class="kw">sum</span>(values)), <span class="st">&quot;%&quot;</span>),  <span class="co"># labels for each slice</span></a>
+<a class="sourceLine" id="cb5-6" title="6">    <span class="dt">col =</span> display_color,</a>
+<a class="sourceLine" id="cb5-7" title="7">    <span class="dt">edges =</span> <span class="dv">20000</span>,  <span class="co"># smoothness of your circle</span></a>
+<a class="sourceLine" id="cb5-8" title="8">    <span class="dt">radius =</span> <span class="dv">1</span>, <span class="co"># size of pie</span></a>
+<a class="sourceLine" id="cb5-9" title="9">    <span class="dt">border =</span> <span class="ot">NA</span>, <span class="co"># adjusts the borders of your pie</span></a>
+<a class="sourceLine" id="cb5-10" title="10">    <span class="dt">main =</span> <span class="st">&quot;GDP By Sector&quot;</span> <span class="co"># title of chart</span></a>
+<a class="sourceLine" id="cb5-11" title="11">    )</a></code></pre></div>
+<p><img src="statistics-reference_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+<div id="pie-chart-in-ggplot2" class="section level4">
+<h4><span class="header-section-number">5.1.4.2</span> Pie Chart In ggplot2</h4>
+<p>Within the package ggplot2, pie charts can be created with the function used to create bar charts <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html"><em>geom_bar()</em></a>. We then convert the bar chart to a pie chart using <a href="https://ggplot2.tidyverse.org/reference/coord_polar.html"><em>coord_polar()</em></a>. The below is an example with code.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">library</span>(ggplot2) <span class="co"># import ggplot2</span></a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="co"># Create dataframe of data</span></a>
+<a class="sourceLine" id="cb6-4" title="4">df =<span class="st"> </span><span class="kw">data.frame</span>(<span class="st">&quot;Sectors&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Agriculture&quot;</span>, <span class="st">&quot;Industry&quot;</span>, <span class="st">&quot;Services&quot;</span>), <span class="co"># labels for your data</span></a>
+<a class="sourceLine" id="cb6-5" title="5">                <span class="st">&quot;Values&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="fl">14.9</span>, <span class="fl">48.0</span>, <span class="fl">37.1</span>)) <span class="co"># values of your data</span></a>
+<a class="sourceLine" id="cb6-6" title="6">display_color =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;#EB984E&quot;</span>, <span class="st">&quot;#1ABC9C&quot;</span>, <span class="st">&quot;#95A5A6&quot;</span>) <span class="co"># colors for slices</span></a>
+<a class="sourceLine" id="cb6-7" title="7"></a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="co"># Create bar plot</span></a>
+<a class="sourceLine" id="cb6-9" title="9">g =<span class="st"> </span><span class="kw">ggplot</span>(df, <span class="kw">aes</span>(<span class="dt">x =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb6-10" title="10">                   <span class="dt">y =</span> Values, <span class="co"># values for your slices</span></a>
+<a class="sourceLine" id="cb6-11" title="11">                   <span class="dt">fill =</span> Sectors</a>
+<a class="sourceLine" id="cb6-12" title="12">                   )</a>
+<a class="sourceLine" id="cb6-13" title="13">           )</a>
+<a class="sourceLine" id="cb6-14" title="14">g =<span class="st"> </span>g <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>( <span class="co"># change the color of the slices</span></a>
+<a class="sourceLine" id="cb6-15" title="15">  <span class="dt">width =</span> <span class="dv">1</span>, <span class="co"># change width of bar</span></a>
+<a class="sourceLine" id="cb6-16" title="16">  <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span></a>
+<a class="sourceLine" id="cb6-17" title="17">)</a>
+<a class="sourceLine" id="cb6-18" title="18"></a>
+<a class="sourceLine" id="cb6-19" title="19"><span class="co"># CONVERT TO PIE CHART</span></a>
+<a class="sourceLine" id="cb6-20" title="20">g =<span class="st"> </span>g <span class="op">+</span><span class="st"> </span><span class="kw">coord_polar</span>(<span class="st">&quot;y&quot;</span>,</a>
+<a class="sourceLine" id="cb6-21" title="21">                    <span class="dt">start =</span> <span class="dv">0</span>)</a>
+<a class="sourceLine" id="cb6-22" title="22">g =<span class="st"> </span>g <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="ot">NULL</span>, <span class="dt">y =</span> <span class="ot">NULL</span>, <span class="dt">fill =</span> <span class="ot">NULL</span>, <span class="dt">title =</span> <span class="st">&quot;GDP By Sector&quot;</span>)</a>
+<a class="sourceLine" id="cb6-23" title="23">g =<span class="st"> </span>g  <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">axis.line =</span> <span class="kw">element_blank</span>(),</a>
+<a class="sourceLine" id="cb6-24" title="24">               <span class="dt">axis.text =</span> <span class="kw">element_blank</span>(),</a>
+<a class="sourceLine" id="cb6-25" title="25">               <span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>(),</a>
+<a class="sourceLine" id="cb6-26" title="26">               <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust =</span> <span class="fl">0.5</span>,</a>
+<a class="sourceLine" id="cb6-27" title="27">                                         <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>),</a>
+<a class="sourceLine" id="cb6-28" title="28">               <span class="dt">panel.background =</span> <span class="kw">element_blank</span>()</a>
+<a class="sourceLine" id="cb6-29" title="29">)</a>
+<a class="sourceLine" id="cb6-30" title="30">g =<span class="st"> </span>g <span class="op">+</span><span class="st"> </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">label =</span> scales<span class="op">::</span><span class="kw">percent</span>(values <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(values))),</a>
+<a class="sourceLine" id="cb6-31" title="31">                  <span class="dt">position =</span> <span class="kw">position_stack</span>(<span class="dt">vjust =</span> <span class="fl">.5</span>)</a>
+<a class="sourceLine" id="cb6-32" title="32">)</a>
+<a class="sourceLine" id="cb6-33" title="33"></a>
+<a class="sourceLine" id="cb6-34" title="34"><span class="co"># Add custom colors</span></a>
+<a class="sourceLine" id="cb6-35" title="35">g =<span class="st"> </span>g <span class="op">+</span><span class="st"> </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> display_color) </a>
+<a class="sourceLine" id="cb6-36" title="36">g</a></code></pre></div>
+<p><img src="statistics-reference_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
 </div>
 <div id="sources-pie-chart" class="section level3">
 <h3><span class="header-section-number">5.1.5</span> Sources and Useful Links</h3>
 <p><strong>Sources:</strong></p>
 <ul>
-<li></li>
+<li><a href="https://en.wikipedia.org/wiki/Pie_chart" class="uri">https://en.wikipedia.org/wiki/Pie_chart</a></li>
 </ul>
 <p><strong>Useful Links:</strong></p>
 <ul>
